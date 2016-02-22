@@ -1,0 +1,98 @@
+?<!DOCTYPE html>
+<html style=" height: 100%; ">
+<head>
+    <title>Ararat Bank</title>
+    <meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+    <link rel="icon" href="/favicon.ico" type="image/x-icon">
+    <script type="text/javascript" src="http://code.jquery.com/jquery-1.7.2.min.js"></script>
+    <script type="text/javascript" src="/bundles/bankmain/js/getData.js"></script>
+	<style type="text/css">
+td {
+    font-size: 50px;
+    font-weight: bold;
+	vertical-align: middle;
+}
+
+td img {
+    width: 70px;
+     margin: 9px;
+    vertical-align: middle;
+}
+
+h1 {
+    margin: 0;
+}
+
+ .vaz { 
+ position: absolute;
+    bottom: 0;
+	    left: 0;
+ width: 100%;
+    font-size: 50px;
+    clear: both;
+    min-width: 100px;
+    border-bottom: solid 1px;
+    margin-bottom: 30px;
+} 
+
+
+</style>
+</head>
+<body onload="startTime()" style="color: #a5013c; text-align: center;
+
+
+ background: linear-gradient(to bottom, #FFF 30%,#B1B1B1 100%);
+
+
+">
+<img src="/bundles/bankmain/img/logo-am.png" alt="">
+
+<h1>EXCHANGE RATES</h1>
+<h1>????????? ?????????? ????????</h1>
+ <div style="
+    border-top: solid;
+    padding: 10px;
+">
+
+
+    <div style="
+    float: left;
+    margin-right: 8px;
+	    padding-top: 25px;
+		
+">
+        <table class="dataTable" border="0" cellpadding="2" cellspacing="1"  style="width:950px;     height:480px; text-align: center; font-size: 30px;">
+            <tbody>
+            <tr>
+                <th style="font-size: xx-large;" >
+                    <div id="dateTime"></div>
+                    {#<span id="hours">0</span>:<span id="minutes">0</span>:<span id="seconds">0</span>#}
+					</th>
+                <th><p>WE BUY AT</p><p>???</p></th>
+				  <th> </th>
+                <th><p>WE SELL AT</p><p>??????</p></th>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+
+<div  style=" float: right;     padding: 25px; ">
+    <meta http-equiv="refresh" content="300"> 
+	<iframe class="video" width="854" height="640" src="{% path media.id, 'reference' %}?autoplay=1" frameborder="0"
+                                                      allowfullscreen></iframe> 
+													  </meta>
+</div>
+
+<marquee class="vaz" behavior="scroll" direction="left">{{ text }}</marquee>
+
+</div>
+ 
+
+
+</body>
+<script type="text/javascript">
+    setTimeout(function(){
+        location.reload();
+    },500000);
+</script>
+</html>

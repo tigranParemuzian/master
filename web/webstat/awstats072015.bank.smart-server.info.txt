@@ -1,0 +1,459 @@
+AWSTATS DATA FILE 7.1 (build 1.983)
+# If you remove this file, all statistics for date 201507 will be lost/reset.
+# Last config file used to build this data file was /etc/awstats/awstats.bank.smart-server.info.conf.
+
+# Position (offset in bytes) in this file for beginning of each section for
+# direct I/O access. If you made changes somewhere in this file, you should
+# also remove completely the MAP section (AWStats will rewrite it at next
+# update).
+BEGIN_MAP 27
+POS_GENERAL 2002                
+POS_TIME 2675                
+POS_VISITOR 7984                
+POS_DAY 8888                
+POS_DOMAIN 3469                
+POS_LOGIN 3706                
+POS_ROBOT 3898                
+POS_WORMS 4096                
+POS_EMAILSENDER 4227                
+POS_EMAILRECEIVER 4370                
+POS_SESSION 9186                
+POS_SIDER 9392                
+POS_FILETYPES 4505                
+POS_DOWNLOADS 4815                
+POS_OS 5051                
+POS_BROWSER 5233                
+POS_SCREENSIZE 5549                
+POS_UNKNOWNREFERER 5623                
+POS_UNKNOWNREFERERBROWSER 5710                
+POS_ORIGIN 5792                
+POS_SEREFERRALS 5934                
+POS_PAGEREFS 6089                
+POS_SEARCHWORDS 6237                
+POS_KEYWORDS 6432                
+POS_MISC 2337                
+POS_ERRORS 6536                
+POS_CLUSTER 3562                
+POS_SIDER_404 6705                
+END_MAP
+
+# LastLine    = Date of last record processed - Last record line number in last log - Last record offset in last log - Last record signature value
+# FirstTime   = Date of first visit for history file
+# LastTime    = Date of last visit for history file
+# LastUpdate  = Date of last update - Nb of parsed records - Nb of parsed old records - Nb of parsed new records - Nb of parsed corrupted - Nb of parsed dropped
+# TotalVisits = Number of visits
+# TotalUnique = Number of unique visitors
+# MonthHostsKnown   = Number of hosts known
+# MonthHostsUnKnown = Number of hosts unknown
+BEGIN_GENERAL 8
+LastLine 20150801155243 1 0 4583903938997
+FirstTime 20150724134938
+LastTime 20150731194925
+LastUpdate 20150801160102 1 0 0 0 0
+TotalVisits 47                  
+TotalUnique 18                  
+MonthHostsKnown 0                   
+MonthHostsUnknown 18                  
+END_GENERAL
+
+# Misc ID - Pages - Hits - Bandwidth
+BEGIN_MISC 10
+QuickTimeSupport 0 0 0
+JavaEnabled 0 0 0
+JavascriptDisabled 0 0 0
+PDFSupport 0 0 0
+WindowsMediaPlayerSupport 0 0 0
+AddToFavourites 0 389 0
+RealPlayerSupport 0 0 0
+TotalMisc 0 0 0
+DirectorSupport 0 0 0
+FlashSupport 0 0 0
+END_MISC
+
+# Hour - Pages - Hits - Bandwidth - Not viewed Pages - Not viewed Hits - Not viewed Bandwidth
+BEGIN_TIME 24
+0 0 0 0 0 0 0
+1 0 0 0 0 0 0
+2 0 0 0 0 0 0
+3 0 0 0 0 0 0
+4 0 0 0 0 0 0
+5 0 0 0 0 0 0
+6 0 0 0 0 0 0
+7 2 4 1727 0 0 0
+8 479 490 79017134 0 0 0
+9 843 1011 118646065 47 65 20274898
+10 303 597 352870075 58 75 40877
+11 539 733 305874108 123 148 79895
+12 2521 2940 969437754 76 95 87926
+13 4286 4394 1180241806 45 54 61121
+14 4663 5648 1200123957 97 152 226682
+15 873 2442 94486607 26 37 69565
+16 390 488 3217787 15 16 8149
+17 391 488 121179461 0 0 0
+18 2037 3679 2950011344 157 220 236603
+19 1202 1534 1930181579 490 499 265309
+20 1320 2637 2371614090 377 523 1120065
+21 8194 14505 2560890287 95 200 418908
+22 1582 4550 293829911 26 49 45194
+23 1526 1603 593489643 2 5 7542
+END_TIME
+
+# Domain - Pages - Hits - Bandwidth
+# The 10 first Pages must be first (order not required for others)
+BEGIN_DOMAIN 1
+ip 31151 47743 8640232573
+END_DOMAIN
+
+# Cluster ID - Pages - Hits - Bandwidth
+BEGIN_CLUSTER 0
+END_CLUSTER
+
+# Login - Pages - Hits - Bandwidth - Last visit
+# The 10 first Pages must be first (order not required for others)
+BEGIN_LOGIN 1
+smart 135 135 1105259 20150728180455
+END_LOGIN
+
+# Robot ID - Hits - Bandwidth - Last visit - Hits on robots.txt
+# The 10 first Hits must be first (order not required for others)
+BEGIN_ROBOT 2
+favicon 2 5729 20150731154852 0
+facebook 2 16504 20150730132449 0
+END_ROBOT
+
+# Worm ID - Hits - Bandwidth - Last visit
+# The 5 first Hits must be first (order not required for others)
+BEGIN_WORMS 0
+END_WORMS
+
+# EMail - Hits - Bandwidth - Last visit
+# The 20 first Hits must be first (order not required for others)
+BEGIN_EMAILSENDER 0
+END_EMAILSENDER
+
+# EMail - Hits - Bandwidth - Last visit
+# The 20 first hits must be first (order not required for others)
+BEGIN_EMAILRECEIVER 0
+END_EMAILRECEIVER
+
+# Files type - Hits - Bandwidth - Bandwidth without compression - Bandwidth after compression
+BEGIN_FILETYPES 12
+css 5132 17292552 0 0
+eot 6 144744 0 0
+png 3485 6581726 0 0
+ico 23 67290 0 0
+woff 387 3093272 0 0
+map 4 566664 0 0
+php 132 1097295 0 0
+html 708 1581726 0 0
+mp4 387 8496455562 0 0
+js 7425 45577172 0 0
+Unknown 29914 67691304 0 0
+gif 140 83266 0 0
+END_FILETYPES
+
+# Downloads - Hits - Bandwidth
+BEGIN_DOWNLOADS 2
+/uploads/media/default/0001/01/f42bb574c6b498a2be8424309a52bbc891a036e9.mp4 70 415 5517090943
+/uploads/media/default/0001/01/7e757378c89b950cbd4017ebba5e02331ce051e1.mp4 31 293 2999480367
+END_DOWNLOADS
+
+# OS ID - Hits
+BEGIN_OS ID - Hits - Pages 7
+macosx 282 270
+linuxandroid 1352 1259
+winxp 791 770
+Unknown 5 0
+linux 11633 6691
+winvista 1989 1780
+win7 32399 20381
+END_OS
+
+# Browser ID - Hits - Pages
+BEGIN_BROWSER 11
+chrome44.0.2403.125 1401 1071
+msie8.0 58 9
+chrome44.0.2403.107 36005 22725
+chrome43.0.2357.81 211 146
+firefox39.0 299 274
+chrome44.0.2403.89 7804 4534
+chrome43.0.2357.93 1352 1259
+safari8.0 282 270
+chrome43.0.2357.134 850 816
+Unknown 5 0
+chrome43.0.2357.132 184 47
+END_BROWSER
+
+# Screen size - Hits
+BEGIN_SCREENSIZE 0
+END_SCREENSIZE
+
+# Unknown referer OS - Last visit date
+BEGIN_UNKNOWNREFERER 0
+END_UNKNOWNREFERER
+
+# Unknown referer Browser - Last visit date
+BEGIN_UNKNOWNREFERERBROWSER 0
+END_UNKNOWNREFERERBROWSER
+
+# Origin - Pages - Hits 
+BEGIN_ORIGIN 6
+From0 279 298
+From1 0 0
+From2 1 1
+From3 0 0
+From4 30871 48152
+From5 0 0
+END_ORIGIN
+
+# Search engine referers ID - Pages - Hits
+BEGIN_SEREFERRALS 1
+google 1 1
+END_SEREFERRALS
+
+# External page referers - Pages - Hits
+# The 10 first Pages must be first (order not required for others)
+BEGIN_PAGEREFS 0
+END_PAGEREFS
+
+# Search keyphrases - Number of search
+# The 10 first number of search must be first (order not required for others)
+BEGIN_SEARCHWORDS 1
+http+%2f%2fwww.bank.smart-server.info%2f 1
+END_SEARCHWORDS
+
+# Search keywords - Number of search
+# The 10 first number of search must be first (order not required for others)
+BEGIN_KEYWORDS 2
+http 1
+%2f%2fwww.bank.smart-server.info%2f 1
+END_KEYWORDS
+
+# Errors - Hits - Bandwidth
+BEGIN_ERRORS 7
+403 67 31166
+401 5 5776
+302 385 153140
+206 4 22248
+500 149 64559
+404 898 529068
+301 224 91901
+END_ERRORS
+
+# URL with 404 errors - Hits - Last URL referer
+BEGIN_SIDER_404 19
+/ 3 -
+/1 1 http://www.bank.smart-server.info/
+/uploads/media/default/0001/01/9a89be7da014044aaba009fa9fdc0ce898a310cc.mp4 1 http://www.bank.smart-server.info/
+/ar 1 -
+/data 5 http://www.bank.smart-server.info/
+/admin 3 -
+/theImg.png 3 http://www.bank.smart-server.info/
+/yitbox 1 -
+/uploads/ 2 -
+/uploads/media/default/0001/01/0d6c8c9f5eeba78f19393084d3deb3837872b71f.jpeg 3 http://www.bank.smart-server.info/
+/uploads/media/default/0001/01/1 310 http://www.bank.smart-server.info/
+/undefined 1 http://www.bank.smart-server.info/
+/uploads/media/sonatamedia/files/admin/file.png 56 http://www.bank.smart-server.info/yitbox/bank/media/media/list
+/uploads/media/default/0001/01/undefined 337 http://www.bank.smart-server.info/
+/uploads/media/default/0001/01/5 126 http://bank.smart-server.info/
+/upload/ 1 -
+/uploads/media/default/0001/01/thumb_1_admin.jpeg 41 http://www.bank.smart-server.info/yitbox/bank/media/media/list
+/uploads/media/default/0001/01/ 1 -
+/editor 2 -
+END_SIDER_404
+
+# Host - Pages - Hits - Bandwidth - Last visit date - [Start date of last visit] - [Last page of last visit]
+# [Start date of last visit] and [Last page of last visit] are saved only if session is not finished
+# The 10 first Hits must be first (order not required for others)
+BEGIN_VISITOR 18
+37.252.84.59 16343 29048 5929645721 20150730193244
+81.89.213.104 6388 6528 560473442 20150729144201
+212.34.251.110 2401 5091 971394038 20150731172734
+195.191.101.2 1733 1807 196471777 20150730150317
+37.157.215.65 816 850 115481888 20150728083523
+82.199.216.3 780 823 181000730 20150727233149
+212.34.241.68 770 791 40468800 20150728131814
+185.44.230.124 495 507 60146284 20150729193244
+31.47.195.226 391 428 61525598 20150729183144
+37.157.217.234 315 504 222558980 20150731194925
+46.71.10.93 1 4 39717640 20150731130712
+37.157.217.233 227 1549 20823552 20150727074501
+188.115.204.102 9 11 19948947 20150729233137
+66.249.81.190 47 49 25574 20150730132634
+66.249.81.193 33 35 16444 20150730132633
+87.241.176.165 270 281 80358045 20150729230636
+66.249.81.196 32 36 20203294 20150730132632
+46.70.76.163 100 109 119971819 20150730132910
+END_VISITOR
+
+# Date - Pages - Hits - Bandwidth - Visits
+BEGIN_DAY 8
+20150724 103 538 8015061 2
+20150725 156 1665 15422234 3
+20150726 136 856 8455104 1
+20150727 13170 23924 9320227192 8
+20150728 2650 3831 990051452 8
+20150729 10228 11509 3359746274 12
+20150730 4696 5391 1363806821 10
+20150731 12 29 59389197 3
+END_DAY
+
+# Session range - Number of visits
+BEGIN_SESSION 7
+1h+ 6
+5mn-15mn 11
+2mn-5mn 5
+30s-2mn 7
+15mn-30mn 6
+0s-30s 3
+30mn-1h 9
+END_SESSION
+
+# URL - Pages - Bandwidth - Entry - Exit
+# The 10 first Pages must be first (order not required for others)
+BEGIN_SIDER 143
+/data/time 22564 473844 4 22
+/data 5751 3206151 1 11
+/ 700 1569796 31 0
+/bundles/sonataadmin/vendor/bootstrap/dist/fonts/glyphicons-halflings-regular.woff 323 1049400 0 1
+/yitbox/bank/main/currency/list 148 7577117 0 0
+/yitbox/bank/main/branch/list 127 6950938 1 3
+/manager/ispmgr 93 250006 1 2
+/admin/login 93 551491 2 2
+/admin/bank/main/currency/list 84 3792826 0 0
+/yitbox/bank/main/price/list 74 4484986 0 0
+/admin/bank/main/currency/batch 2 45129 0 0
+/admin/bank/media/media/4/edit 4 134257 0 0
+/bundles/sonataadmin/vendor/bootstrap/dist/fonts/glyphicons-halflings-regular.eot 2 20335 0 0
+/admin/bank/media/media/1/acl 2 66118 0 0
+/admin/bank/media/media/3/edit 2 71196 0 0
+/myadmin/import.php 3 15820 0 0
+/admin/bank/user/group/3/edit 3 151051 0 0
+/myadmin/js/get_image.js.php 3 18318 0 0
+/admin/core/set-object-field-value 1 785 0 0
+/myadmin/version_check.php 7 301 0 0
+/yitbox/bank/main/price/batch 1 27891 0 0
+/admin/bank/media/media/2/edit 2 61385 0 0
+/admin/bank/main/currency/5/edit 1 51957 0 0
+/admin/bank/media/media/5/acl 2 66046 0 0
+/yitbox/bank/user/group/list 6 173671 0 0
+/yitbox/bank/main/branch/2/edit 2 130844 0 0
+/admin/bank/media/media/6/edit 2 71020 0 0
+/yitbox/bank/main/price/1/edit 3 90299 0 0
+/yitbox/bank/main/price/export 2 3222 0 0
+/yitbox/bank/main/currency/3/edit 4 222371 0 0
+/myadmin/db_structure.php 19 67706 0 0
+/admin/bank/main/currency/1/show 2 53418 0 0
+/admin/bank/user/user/2/acl 3 98993 0 0
+/bundles/sonataadmin/vendor/AdminLTE/fonts/fontawesome-webfont.woff 64 2043872 0 0
+/myadmin/ 3 7964 0 0
+/admin/bank/user/group/1/edit 5 234633 0 0
+/admin/bank/main/price/list 27 1377024 0 1
+/admin/bank/main/branch/5/edit 15 936549 0 0
+/admin/bank/main/currency/4/acl 2 60344 0 0
+/yitbox/bank/main/price/2/edit 3 90315 0 0
+/admin/bank/media/gallery/list 10 317363 0 0
+/login 1 4614 0 0
+/yitbox/core/set-object-field-value 1 786 0 0
+/bundles/sonataadmin/vendor/AdminLTE/fonts/fontawesome-webfont.eot 2 38205 0 0
+/admin/bank/user/group/create 2 99244 0 0
+/admin/bank/main/branch/4/show 1 20406 0 0
+/admin/bank/main/currency/6/edit 1 54987 0 0
+/yitbox/bank/main/price/create 1 29991 0 0
+/admin/dashboard 70 2131876 0 0
+/admin/bank/main/branch/5/acl 5 149542 0 0
+/admin/bank/main/currency/1/edit 22 1235542 0 0
+/yitbox/core/get-short-object-description 7 1190 0 0
+/yitbox/bank/main/currency/5/delete 1 25866 0 0
+/myadmin/navigation.php 55 54905 0 0
+/yitbox/bank/main/branch/export 1 883 0 0
+/yitbox/bank/user/group/create 2 86052 0 0
+/admin/bank/media/media/create 31 60329 0 0
+/admin/bank/user/group/list 14 604955 0 0
+/admin/bank/user/user/list 38 2205843 0 0
+/yitbox/bank/media/media/list 16 970868 0 0
+/yitbox/bank/main/branch/5/show 7 184456 0 0
+/yitbox/bank/main/branch/5/edit 9 587138 0 0
+/yitbox/bank/main/branch/1/edit 4 261444 0 0
+/admin/bank/media/media/6/acl 2 66046 0 0
+/admin/bank/main/currency/3/delete 1 20992 0 0
+/yitbox/bank/media/media/2/edit 1 32659 0 0
+/yitbox/dashboard 43 1454654 0 1
+/myadmin/db_import.php 4 21443 0 0
+/admin/bank/main/currency/2/edit 24 1358514 0 0
+/admin/bank/main/branch/4/edit 21 1312701 0 0
+/yitbox/bank/media/media/1/edit 3 98957 0 0
+/admin/bank/media/media/2/acl 2 66286 0 0
+/admin/bank/user/user/2/edit 10 357411 0 0
+/admin/bank/main/branch/6/acl 3 90858 0 0
+/admin/bank/media/media/1/edit 3 88776 0 0
+/yitbox/bank/main/branch/6/show 1 26877 0 0
+/admin/bank/user/group/4/edit 1 50245 0 0
+/yitbox/core/append-form-field-element 13 789779 0 0
+/admin/bank/main/currency/create 8 392266 0 0
+/yitbox/bank/media/media/1/show 1 28227 0 0
+/yitbox/bank/main/currency/4/edit 5 270596 0 0
+/manager/ 5 3966 2 0
+/admin/bank/main/currency/1/acl 9 256899 0 0
+/bundles/sonataadmin/vendor/jquery/dist/jquery.min.map 4 566664 0 0
+/yitbox/login 34 211094 5 2
+/yitbox/bank/main/price/2/delete 1 25840 0 0
+/yitbox/bank/main/currency/1/edit 61 4676439 0 0
+/yitbox/bank/media/gallery/list 10 292550 0 1
+/admin/bank/main/currency/4/delete 1 18767 0 0
+/yitbox/bank/main/currency/3/show 1 24814 0 0
+/admin/bank/user/user/4/acl 2 66150 0 0
+/yitbox/bank/main/currency/5/edit 8 446670 0 0
+/myadmin/index.php 6 16132 0 0
+/myadmin/querywindow.php 2 4698 0 0
+/yitbox/bank/user/user/create 16 499708 0 0
+/admin/bank/main/currency/1/delete 2 41984 0 0
+/admin/bank/user/group/2/edit 4 188274 0 0
+/admin/bank/main/currency/8/edit 3 158915 0 0
+/yitbox/bank/media/media/create 18 31577 0 0
+/yitbox/bank/main/price/3/edit 3 90327 0 0
+/admin/bank/user/user/3/acl 2 66150 0 0
+/bundles/sonataadmin/vendor/AdminLTE/fonts/ionicons.eot 2 86204 0 0
+/myadmin/js/messages.php 14 342859 0 0
+/admin/bank/main/branch/list 58 2533956 0 0
+/yitbox/bank/main/currency/2/edit 8 465437 0 0
+/yitbox/bank/user/user/2/edit 1 33394 0 0
+/admin/bank/main/branch/create 5 301381 0 0
+/admin/bank/main/currency/4/edit 8 403546 0 0
+/yitbox/bank/main/currency/6/edit 10 546919 0 0
+/admin/bank/main/currency/3/acl 5 156058 0 0
+/admin/bank/main/branch/6/edit 7 428575 0 0
+/yitbox/bank/user/group/1/edit 1 43363 0 0
+/admin/bank/main/currency/3/edit 12 670640 0 0
+/admin/bank/user/user/3/edit 7 250651 0 0
+/admin/core/append-form-field-element 17 294441 0 0
+/yitbox/bank/main/branch/4/show 6 156997 0 0
+/yitbox/bank/user/user/list 26 1307412 0 0
+/admin/core/get-short-object-description 21 3012 0 0
+/admin/bank/main/currency/7/edit 2 112273 0 0
+/yitbox/bank/main/currency/6/delete 3 77604 0 0
+/yitbox/bank/main/currency/create 7 356933 0 0
+/admin/bank/media/media/3/acl 2 66160 0 0
+/admin/bank/main/branch/4/acl 4 132348 0 0
+/admin/bank/user/user/create 1 35669 0 0
+/admin/bank/main/currency/2/acl 6 173462 0 0
+/yitbox/bank/main/currency/1/show 9 235402 0 0
+/admin/bank/main/price/create 2 45370 0 0
+/yitbox/bank/main/branch/4/edit 25 1638237 0 0
+/yitbox/bank/main/price/9/edit 1 30105 0 0
+/myadmin/sql.php 2 12836 0 0
+/yitbox/bank/main/branch/create 4 260194 0 0
+/admin/bank/media/media/list 42 2098933 0 1
+/myadmin/phpmyadmin.css.php 10 487485 0 0
+/admin/bank/media/media/4/acl 4 132092 0 0
+/admin/bank/media/media/5/edit 3 98740 0 0
+/yitbox/bank/main/branch/1/show 1 28896 0 0
+/myadmin/main.php 7 54792 0 0
+/admin/bank/main/branch/5/show 1 19788 0 0
+/yitbox/bank/media/media/batch 2 57497 0 0
+/admin/bank/main/currency/2/show 2 53127 0 0
+/admin/bank/user/user/4/edit 6 218109 0 0
+/admin/bank/media/gallery/create 2 10681 0 0
+/admin/bank/user/user/1/edit 2 72648 0 0
+END_SIDER

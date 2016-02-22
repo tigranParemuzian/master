@@ -1,0 +1,596 @@
+<?xml version="1.0"?>
+<orm-designer version="2.3.5.882" mvc="Symfony2" orm="Doctrine2">
+  <module name="Entity" import-format="Doctrine2Php" import-path="." uuid="7a195ffc-d257-4d60-acd6-89bf572661f2">
+    <entity name="Address" uuid="4f275ec0-37cf-4479-a259-776bfdbe36c9">
+      <field name="id" type="integer" required="true" primary="true" uuid="ce66309f-01ad-48fa-8ed1-00c93d75d114">
+        <orm-attributes>
+          <attribute name="column">id</attribute>
+          <attribute name="generator">
+            <attribute name="strategy">AUTO</attribute>
+          </attribute>
+        </orm-attributes>
+      </field>
+      <field name="city" type="string" size="20" uuid="2203c5b1-069c-4b4a-b775-e0a0ca6077ff">
+        <orm-attributes>
+          <attribute name="column">city</attribute>
+        </orm-attributes>
+      </field>
+      <field name="address" type="string" size="50" uuid="4d7cadd1-60b9-4eb8-94f5-6b9f47c41b59">
+        <orm-attributes>
+          <attribute name="column">address</attribute>
+        </orm-attributes>
+      </field>
+      <field name="district_id" uuid="aea14369-038d-4eb7-8d95-0858f88dc5de"/>
+      <field name="due_id" uuid="b8149d8a-c96c-46de-baed-579cd52f26a6"/>
+      <orm-attributes>
+        <attribute name="table">address</attribute>
+        <attribute name="export-file-name">Address.php</attribute>
+      </orm-attributes>
+    </entity>
+    <association from="Address" to="District" owner-alias="" inverse-alias="district" uuid="0fa03b10-4f9d-4b4a-a822-0ff1b1cc344d">
+      <association-field from="district_id" to="id"/>
+      <orm-attributes>
+        <attribute name="side-owning"/>
+        <attribute name="side-inverse"/>
+      </orm-attributes>
+    </association>
+    <association from="Address" to="Partavor" owner-alias="addresses" inverse-alias="due" uuid="c8c19575-d655-4158-96cd-48ca70da108b">
+      <association-field from="due_id" to="id"/>
+      <orm-attributes>
+        <attribute name="side-owning"/>
+        <attribute name="side-inverse">
+          <attribute name="cascade">
+            <attribute name="persist">true</attribute>
+            <attribute name="remove">true</attribute>
+          </attribute>
+          <attribute name="orphan-removal">true</attribute>
+        </attribute>
+      </orm-attributes>
+    </association>
+    <entity name="AdministrativeDistrict" uuid="1b50a7cd-3bc2-4a08-8c76-edb5a0eea7a6">
+      <field name="id" type="integer" required="true" primary="true" uuid="db8e27ac-747d-4d62-a5ab-f732fd86cd53">
+        <orm-attributes>
+          <attribute name="column">id</attribute>
+          <attribute name="generator">
+            <attribute name="strategy">AUTO</attribute>
+          </attribute>
+        </orm-attributes>
+      </field>
+      <field name="adminDistrictName" type="string" size="50" uuid="dd7daf8d-5599-49bf-90b3-a7bdd7ca5a03">
+        <orm-attributes>
+          <attribute name="column">admin_district_name</attribute>
+        </orm-attributes>
+      </field>
+      <field name="address" type="string" size="50" uuid="a48a9d6a-8bbc-4b3a-bdc7-bddcd79f794f">
+        <orm-attributes>
+          <attribute name="column">address</attribute>
+        </orm-attributes>
+      </field>
+      <field name="districtHead" type="string" size="50" uuid="06724540-a9d4-4928-af25-814ccc6ab7be">
+        <orm-attributes>
+          <attribute name="column">district_head</attribute>
+        </orm-attributes>
+      </field>
+      <field name="account" type="string" size="20" uuid="1405b4ba-ab3e-4bb1-8fd8-a5e5ae165940">
+        <orm-attributes>
+          <attribute name="column">account</attribute>
+        </orm-attributes>
+      </field>
+      <orm-attributes>
+        <attribute name="table">administrative_district</attribute>
+        <attribute name="export-file-name">AdministrativeDistrict.php</attribute>
+      </orm-attributes>
+    </entity>
+    <entity name="Citizen" uuid="08682b0b-fa00-43f1-93d7-edd8128899d1">
+      <field name="id" type="integer" required="true" primary="true" uuid="365c02e5-ea47-4639-a6c1-2a56f5c7fbc0">
+        <orm-attributes>
+          <attribute name="column">id</attribute>
+          <attribute name="generator">
+            <attribute name="strategy">AUTO</attribute>
+          </attribute>
+        </orm-attributes>
+      </field>
+      <field name="passportSeriesNumber" type="string" size="30" uuid="8fad6e8c-b5b5-4746-a3ab-143be68029d9">
+        <orm-attributes>
+          <attribute name="column">passport_series_number</attribute>
+        </orm-attributes>
+      </field>
+      <field name="given" type="date" uuid="61596d94-adc8-4cf4-a820-7650a93ac5d5">
+        <orm-attributes>
+          <attribute name="column">given</attribute>
+        </orm-attributes>
+      </field>
+      <field name="fromTo" type="string" size="20" uuid="b26c25c9-3ade-4995-a546-91a2f1d6d03c">
+        <orm-attributes>
+          <attribute name="column">from_to</attribute>
+        </orm-attributes>
+      </field>
+      <field name="hch" type="string" size="30" uuid="67e4c0bc-7ca0-4020-8c4e-f05cfc12c7cc">
+        <orm-attributes>
+          <attribute name="column">hch</attribute>
+        </orm-attributes>
+      </field>
+      <inheritance-child derived-from="Partavor" discriminator-value="citizen" uuid="61dc83ab-e138-4b82-a1bd-823c1b54af2e"/>
+      <orm-attributes>
+        <attribute name="table">citizen</attribute>
+        <attribute name="export-file-name">Citizen.php</attribute>
+      </orm-attributes>
+    </entity>
+    <entity name="Company" uuid="085e3c95-604e-43d6-bc5b-0b7e2b9e0de4">
+      <field name="id" type="integer" required="true" primary="true" uuid="7910e476-7122-4cda-99d6-709000a8647c">
+        <orm-attributes>
+          <attribute name="column">id</attribute>
+          <attribute name="generator">
+            <attribute name="strategy">AUTO</attribute>
+          </attribute>
+        </orm-attributes>
+      </field>
+      <field name="director" type="string" size="50" uuid="4cf4475b-6511-4613-8712-60c22ebc478e">
+        <orm-attributes>
+          <attribute name="column">director</attribute>
+        </orm-attributes>
+      </field>
+      <field name="hvhh" type="string" size="30" uuid="173894a5-7c9f-4dab-8d53-fc1933b27c8b">
+        <orm-attributes>
+          <attribute name="column">hvhh</attribute>
+        </orm-attributes>
+      </field>
+      <field name="registerNumber" type="string" size="30" uuid="9c495a2c-8781-4c47-8760-c4e8fee7da55">
+        <orm-attributes>
+          <attribute name="column">register_number</attribute>
+        </orm-attributes>
+      </field>
+      <field name="accountingNumber" type="string" size="30" uuid="281e3cd0-f6f5-46fc-b7df-6375c90ca988">
+        <orm-attributes>
+          <attribute name="column">accounting_number</attribute>
+        </orm-attributes>
+      </field>
+      <inheritance-child derived-from="Partavor" discriminator-value="company" uuid="b956b5de-6acd-4959-8825-cd94c27c74d3"/>
+      <orm-attributes>
+        <attribute name="table">company</attribute>
+        <attribute name="export-file-name">Company.php</attribute>
+      </orm-attributes>
+    </entity>
+    <entity name="Contribution" uuid="5bddd458-1b18-4508-9c63-b61dd3deaaa9">
+      <field name="id" type="integer" required="true" primary="true" uuid="0bed8750-0c40-4021-9e52-86f5b95fd5b4">
+        <orm-attributes>
+          <attribute name="column">id</attribute>
+          <attribute name="generator">
+            <attribute name="strategy">AUTO</attribute>
+          </attribute>
+        </orm-attributes>
+      </field>
+      <field name="quantity" type="integer" uuid="5906f682-bf5b-4a1d-8527-4444d7d8a8c3">
+        <orm-attributes>
+          <attribute name="column">quantity</attribute>
+        </orm-attributes>
+      </field>
+      <field name="date" type="date" uuid="23690f07-63f7-43b4-8919-ad030f090edc">
+        <orm-attributes>
+          <attribute name="column">date</attribute>
+        </orm-attributes>
+      </field>
+      <field name="type" type="string" size="15" uuid="a4fdbb58-d030-49b2-acfd-6e4b1021df92">
+        <orm-attributes>
+          <attribute name="column">type</attribute>
+        </orm-attributes>
+      </field>
+      <field name="info_id" required="true" uuid="0f8a7dc8-3ff9-4e07-bc7b-fba7b791ab3c"/>
+      <orm-attributes>
+        <attribute name="table">contribution</attribute>
+        <attribute name="export-file-name">Contribution.php</attribute>
+      </orm-attributes>
+    </entity>
+    <association from="Contribution" to="Info" owner-alias="contribution" inverse-alias="info" uuid="9816aa04-c4b0-4ee0-b1ee-03d4269f4906">
+      <association-field from="info_id" to="id"/>
+      <orm-attributes>
+        <attribute name="side-owning"/>
+        <attribute name="side-inverse">
+          <attribute name="cascade">
+            <attribute name="persist">true</attribute>
+            <attribute name="remove">true</attribute>
+          </attribute>
+          <attribute name="orphan-removal">true</attribute>
+        </attribute>
+      </orm-attributes>
+    </association>
+    <entity name="District" uuid="22dbeb58-42ad-4088-92a7-dd395149a8ba">
+      <field name="id" type="integer" required="true" primary="true" uuid="6b36582e-eec8-44c0-a831-dc026cc704ec">
+        <orm-attributes>
+          <attribute name="column">id</attribute>
+          <attribute name="generator">
+            <attribute name="strategy">AUTO</attribute>
+          </attribute>
+        </orm-attributes>
+      </field>
+      <field name="districtName" type="string" size="50" uuid="f5ace2fb-413b-4585-90dd-758b34704d2d">
+        <orm-attributes>
+          <attribute name="column">district_name</attribute>
+        </orm-attributes>
+      </field>
+      <orm-attributes>
+        <attribute name="table">district</attribute>
+        <attribute name="export-file-name">District.php</attribute>
+      </orm-attributes>
+    </entity>
+    <entity name="Employer" uuid="57adbbca-972a-4af1-ae80-f37709211b04">
+      <field name="id" type="integer" required="true" primary="true" uuid="d24b7ee6-278e-4ea6-898e-b48424889763">
+        <orm-attributes>
+          <attribute name="column">id</attribute>
+          <attribute name="generator">
+            <attribute name="strategy">AUTO</attribute>
+          </attribute>
+        </orm-attributes>
+      </field>
+      <field name="passportSeriesNumber" type="string" size="30" uuid="2addc62f-e247-43d1-a3f5-7d7b743c7c3d">
+        <orm-attributes>
+          <attribute name="column">passport_series_number</attribute>
+        </orm-attributes>
+      </field>
+      <field name="given" type="date" uuid="8aef960b-a7a8-454a-823b-61909e3083bc">
+        <orm-attributes>
+          <attribute name="column">given</attribute>
+        </orm-attributes>
+      </field>
+      <field name="fromTo" type="string" size="20" uuid="8773d7e2-5bbe-42a8-8394-8268994867b9">
+        <orm-attributes>
+          <attribute name="column">from_to</attribute>
+        </orm-attributes>
+      </field>
+      <field name="hch" type="string" size="30" uuid="eec2914e-e2c9-4797-9807-0e374132991e">
+        <orm-attributes>
+          <attribute name="column">hch</attribute>
+        </orm-attributes>
+      </field>
+      <field name="hvhh" type="string" size="30" uuid="99c43c1d-dc59-4d95-bd4f-d76bc26da00b">
+        <orm-attributes>
+          <attribute name="column">hvhh</attribute>
+        </orm-attributes>
+      </field>
+      <field name="registerNumber" type="string" size="30" uuid="f63b92e9-a18d-4447-844d-aad178950e67">
+        <orm-attributes>
+          <attribute name="column">register_number</attribute>
+        </orm-attributes>
+      </field>
+      <field name="accountingNumber" type="string" size="30" uuid="0abdde57-036b-475b-b162-466993c473ea">
+        <orm-attributes>
+          <attribute name="column">accounting_number</attribute>
+        </orm-attributes>
+      </field>
+      <inheritance-child derived-from="Partavor" discriminator-value="employer" uuid="0482f2ef-5cd3-4283-a853-745720b813cd"/>
+      <orm-attributes>
+        <attribute name="table">employer</attribute>
+        <attribute name="export-file-name">Employer.php</attribute>
+      </orm-attributes>
+    </entity>
+    <entity name="File" uuid="3f53e190-9d7c-424e-ab22-2196d438057e">
+      <field name="id" type="integer" required="true" primary="true" uuid="d88e0a48-9382-4590-9924-77f8a19d4bdf">
+        <orm-attributes>
+          <attribute name="column">id</attribute>
+          <attribute name="generator">
+            <attribute name="strategy">AUTO</attribute>
+          </attribute>
+        </orm-attributes>
+      </field>
+      <field name="path" type="string" size="50" uuid="6395a0c0-003d-439a-a245-15fc17ea9570">
+        <orm-attributes>
+          <attribute name="column">path</attribute>
+        </orm-attributes>
+      </field>
+      <field name="name" type="string" size="50" uuid="3704aef3-3990-4614-846a-0beeb52d4e0f">
+        <orm-attributes>
+          <attribute name="column">name</attribute>
+        </orm-attributes>
+      </field>
+      <field name="extention" type="string" size="5" uuid="ca588288-7a03-42e7-9ede-24c57d868279">
+        <orm-attributes>
+          <attribute name="column">extention</attribute>
+        </orm-attributes>
+      </field>
+      <field name="size" type="integer" uuid="c70427a7-17b6-407d-9e14-c16852cf4a52">
+        <orm-attributes>
+          <attribute name="column">size</attribute>
+        </orm-attributes>
+      </field>
+      <orm-attributes>
+        <attribute name="table">file</attribute>
+        <attribute name="export-file-name">File.php</attribute>
+      </orm-attributes>
+    </entity>
+    <entity name="Info" uuid="82bc2ec0-15ab-4fc9-95d1-4d2ac5b1e39f">
+      <field name="id" type="integer" required="true" primary="true" uuid="43fe6519-6935-407d-adb1-13a0c48e512e">
+        <orm-attributes>
+          <attribute name="column">id</attribute>
+          <attribute name="generator">
+            <attribute name="strategy">AUTO</attribute>
+          </attribute>
+        </orm-attributes>
+      </field>
+      <field name="status" type="string" size="20" uuid="f12bdc1b-4ef4-4b38-bc2a-7f8f6eb66e5b">
+        <orm-attributes>
+          <attribute name="column">status</attribute>
+        </orm-attributes>
+      </field>
+      <field name="administrativeActNumber" type="string" size="30" required="true" uuid="2bbea142-540c-48cf-81a3-b9c85ae1b239">
+        <orm-attributes>
+          <attribute name="column">administrative_act_number</attribute>
+        </orm-attributes>
+      </field>
+      <field name="constituteDate" type="date" required="true" uuid="f09f87c5-26a9-4f96-b01c-37adb9ee4059">
+        <orm-attributes>
+          <attribute name="column">constitute_date</attribute>
+        </orm-attributes>
+      </field>
+      <field name="amercement" type="integer" required="true" uuid="f4038520-fc9d-40d4-a320-719493442ff2">
+        <orm-attributes>
+          <attribute name="column">amercement</attribute>
+        </orm-attributes>
+      </field>
+      <field name="indisputableBecameDate" type="date" uuid="0117f73c-6d73-4c09-b982-dff5a2a2e541">
+        <orm-attributes>
+          <attribute name="column">indisputable_became_date</attribute>
+        </orm-attributes>
+      </field>
+      <field name="respiteEndDate" type="date" uuid="421f8cbd-40c4-49a6-a6e3-915ed97a5450">
+        <orm-attributes>
+          <attribute name="column">respite_end_date</attribute>
+        </orm-attributes>
+      </field>
+      <field name="createdAt" type="datetime" required="true" uuid="bcbdd7ba-61f1-4a6a-b5ad-a78a949e98ff">
+        <orm-attributes>
+          <attribute name="column">created_at</attribute>
+        </orm-attributes>
+      </field>
+      <field name="isArchive" type="boolean" required="true" uuid="b9482758-0a1b-48ea-9a3e-d6b4a95af450">
+        <orm-attributes>
+          <attribute name="column">is_archive</attribute>
+          <attribute name="options">
+            <attribute name="default">0</attribute>
+          </attribute>
+        </orm-attributes>
+      </field>
+      <field name="toArchive" type="datetime" uuid="94130e23-bd2c-4a21-b20c-91ff1f4f3c4d">
+        <orm-attributes>
+          <attribute name="column">to_archive</attribute>
+        </orm-attributes>
+      </field>
+      <field name="due_id" required="true" unique="true" uuid="e0f3912d-1870-4fcd-ac70-b5b9d75fbbe4"/>
+      <field name="file_id" unique="true" uuid="379e7d9b-959f-42c1-85de-61aea24b29c6"/>
+      <field name="viv_article_id" required="true" uuid="14fb1c88-21d7-47ab-ba11-33f6c3910446"/>
+      <field name="admin_district_id" required="true" uuid="3de70534-18f7-44de-8095-8cc4bad90aaf"/>
+      <orm-attributes>
+        <attribute name="repository-class">Law\DahkBundle\Entity\Repositories\InfoRepository</attribute>
+        <attribute name="table">info</attribute>
+        <attribute name="export-file-name">Info.php</attribute>
+      </orm-attributes>
+    </entity>
+    <association from="Info" to="Partavor" owner-alias="" inverse-alias="due" uuid="908d2ba2-c4bd-4937-97bf-59d1d18eb6c9">
+      <association-field from="due_id" to="id"/>
+      <orm-attributes>
+        <attribute name="side-owning">
+          <attribute name="cascade">
+            <attribute name="persist">true</attribute>
+            <attribute name="remove">true</attribute>
+          </attribute>
+          <attribute name="orphan-removal">true</attribute>
+        </attribute>
+        <attribute name="side-inverse"/>
+      </orm-attributes>
+    </association>
+    <association from="Info" to="File" owner-alias="" inverse-alias="pdf" uuid="8172c5d5-d579-4fa4-b057-b0a90acc83d4">
+      <association-field from="file_id" to="id"/>
+      <orm-attributes>
+        <attribute name="side-owning">
+          <attribute name="cascade">
+            <attribute name="persist">true</attribute>
+            <attribute name="remove">true</attribute>
+          </attribute>
+          <attribute name="orphan-removal">true</attribute>
+        </attribute>
+        <attribute name="side-inverse"/>
+      </orm-attributes>
+    </association>
+    <association from="Info" to="VivArticle" owner-alias="" inverse-alias="vivArticle" uuid="d8b1dcac-3ba5-4dc6-8ddb-40d665c36eee">
+      <association-field from="viv_article_id" to="id"/>
+      <orm-attributes>
+        <attribute name="side-owning"/>
+        <attribute name="side-inverse"/>
+      </orm-attributes>
+    </association>
+    <association from="Info" to="AdministrativeDistrict" owner-alias="" inverse-alias="adminDistrict" uuid="d1fd0d1a-ac7e-4667-981f-6a54d5ee7ddd">
+      <association-field from="admin_district_id" to="id"/>
+      <orm-attributes>
+        <attribute name="side-owning"/>
+        <attribute name="side-inverse"/>
+      </orm-attributes>
+    </association>
+    <entity name="Partavor" uuid="7e75241d-3d13-4fce-b744-65df047865ba">
+      <field name="id" type="integer" required="true" primary="true" uuid="30a58a1b-143a-49ff-b7e0-ffe77eff8b77">
+        <orm-attributes>
+          <attribute name="column">id</attribute>
+          <attribute name="generator">
+            <attribute name="strategy">AUTO</attribute>
+          </attribute>
+        </orm-attributes>
+      </field>
+      <field name="name" type="string" size="50" required="true" uuid="62ecf09f-8cc1-4fea-8a8a-1753720c73f6">
+        <orm-attributes>
+          <attribute name="column">name</attribute>
+        </orm-attributes>
+      </field>
+      <field name="descr" type="string" uuid="71558058-df53-4950-8865-5f4839384876"/>
+      <inheritance-parent discriminator-field="descr" type="JOINED" uuid="23fc316f-a73c-4d67-a5f5-cb5cf82b992d"/>
+      <orm-attributes>
+        <attribute name="table">partavor</attribute>
+        <attribute name="export-file-name">Partavor.php</attribute>
+      </orm-attributes>
+    </entity>
+    <entity name="Settings" uuid="c7ea3228-e4fb-48df-80ee-68f46c08b434">
+      <field name="id" type="integer" required="true" primary="true" uuid="d2a0f96e-00fe-4507-b94c-0689d39c2a57">
+        <orm-attributes>
+          <attribute name="column">id</attribute>
+          <attribute name="generator">
+            <attribute name="strategy">AUTO</attribute>
+          </attribute>
+        </orm-attributes>
+      </field>
+      <field name="pageCount" type="integer" uuid="f30db33b-c5b3-4f46-a877-b6d581493c0a">
+        <orm-attributes>
+          <attribute name="column">pageCount</attribute>
+        </orm-attributes>
+      </field>
+      <orm-attributes>
+        <attribute name="table">settings</attribute>
+        <attribute name="export-file-name">Settings.php</attribute>
+      </orm-attributes>
+    </entity>
+    <entity name="VivArticle" uuid="107345d0-44b2-44ac-820e-1c32f5f5b75a">
+      <field name="id" type="integer" required="true" primary="true" uuid="76f7af66-74ab-4c56-be08-ef975f14ca16">
+        <orm-attributes>
+          <attribute name="column">id</attribute>
+          <attribute name="generator">
+            <attribute name="strategy">AUTO</attribute>
+          </attribute>
+        </orm-attributes>
+      </field>
+      <field name="vivArticleName" type="string" size="255" uuid="9f3014cc-8af1-494e-bd0f-f1a4f0b77ab2">
+        <orm-attributes>
+          <attribute name="column">viv_article_name</attribute>
+        </orm-attributes>
+      </field>
+      <orm-attributes>
+        <attribute name="table">viv_article</attribute>
+        <attribute name="export-file-name">VivArticle.php</attribute>
+      </orm-attributes>
+    </entity>
+    <entity name="Gallery" uuid="58a8efbf-d948-4cf4-a489-0f5fc8f71609">
+      <field name="id" type="integer" required="true" primary="true" uuid="6e8230d6-f06a-4f2c-9dbf-8f9a97764fe7">
+        <orm-attributes>
+          <attribute name="column">id</attribute>
+          <attribute name="generator">
+            <attribute name="strategy">IDENTITY</attribute>
+          </attribute>
+        </orm-attributes>
+      </field>
+      <orm-attributes>
+        <attribute name="table">media__gallery</attribute>
+        <attribute name="export-file-name">Gallery.php</attribute>
+      </orm-attributes>
+    </entity>
+    <entity name="GalleryHasMedia" uuid="69585351-7cb5-4ddd-940e-3fdfe701389f">
+      <field name="id" type="integer" required="true" primary="true" uuid="b6b1ab99-922f-4de0-aab3-67086a4b92a6">
+        <orm-attributes>
+          <attribute name="column">id</attribute>
+          <attribute name="generator">
+            <attribute name="strategy">IDENTITY</attribute>
+          </attribute>
+        </orm-attributes>
+      </field>
+      <orm-attributes>
+        <attribute name="table">media__gallery_media</attribute>
+        <attribute name="export-file-name">GalleryHasMedia.php</attribute>
+      </orm-attributes>
+    </entity>
+    <entity name="Media" uuid="4ed5a56c-b546-4cff-8bc5-3c796f20164b">
+      <field name="id" type="integer" required="true" primary="true" uuid="10c1d99c-9200-4403-bf14-a20b54218500">
+        <orm-attributes>
+          <attribute name="column">id</attribute>
+          <attribute name="generator">
+            <attribute name="strategy">IDENTITY</attribute>
+          </attribute>
+        </orm-attributes>
+      </field>
+      <field name="list_name" type="string" size="500" uuid="47384ada-7b7d-4b43-a323-276d8722a18e"/>
+      <field name="watermark" type="integer" uuid="4c4a37b3-c0a3-4838-b69e-8874cd0ee8c6"/>
+      <orm-attributes>
+        <attribute name="table">media__media</attribute>
+        <attribute name="export-file-name">Media.php</attribute>
+      </orm-attributes>
+    </entity>
+    <entity name="MediaTranslations" uuid="3e7b5f7d-0ee3-48a6-88e0-c843fdb9b131">
+      <field name="id" type="integer" required="true" primary="true" uuid="e90037cc-083c-4de7-9ce9-97dcaffc303f">
+        <orm-attributes>
+          <attribute name="generator">
+            <attribute name="strategy">AUTO</attribute>
+          </attribute>
+        </orm-attributes>
+      </field>
+      <field name="locale" type="string" size="8" uuid="06173e1a-4e5d-40eb-87bf-1724913a7bb9"/>
+      <field name="field" type="string" size="32" uuid="e21f17fc-3565-46a7-b9f0-ccf23a58dc7c"/>
+      <field name="content" type="text" uuid="4660966b-d9f6-4bbd-98b0-f1791b9f2e12"/>
+      <field name="object_id" uuid="6ebb40dd-d12a-4d6c-9918-13f7506cc0b9"/>
+      <index name="media_trans_lookup_unique_idx" unique="true">
+        <index-field name="locale"/>
+        <index-field name="object_id"/>
+        <index-field name="field"/>
+      </index>
+      <orm-attributes>
+        <attribute name="table">media_translations</attribute>
+        <attribute name="export-file-name">MediaTranslations.php</attribute>
+      </orm-attributes>
+    </entity>
+    <association from="MediaTranslations" to="Media" owner-alias="translations" inverse-alias="object" uuid="aa2c46b4-8d29-4e44-a18c-3601a040ef37">
+      <association-field from="object_id" to="id"/>
+      <orm-attributes>
+        <attribute name="on-delete">CASCADE</attribute>
+        <attribute name="side-owning"/>
+        <attribute name="side-inverse">
+          <attribute name="cascade">
+            <attribute name="persist">true</attribute>
+            <attribute name="remove">true</attribute>
+          </attribute>
+        </attribute>
+      </orm-attributes>
+    </association>
+    <entity name="Group" uuid="2f34ceda-5080-4555-a209-87fe0ac93190">
+      <field name="id" type="integer" required="true" primary="true" uuid="95f57210-893d-41a4-828f-3b3484154489">
+        <orm-attributes>
+          <attribute name="generator">
+            <attribute name="strategy">AUTO</attribute>
+          </attribute>
+        </orm-attributes>
+      </field>
+      <orm-attributes>
+        <attribute name="table">fos_user_groups</attribute>
+        <attribute name="export-file-name">Group.php</attribute>
+      </orm-attributes>
+    </entity>
+    <entity name="User" uuid="6beda593-c273-4110-92a3-bc4a3ae66db0">
+      <field name="id" type="integer" required="true" primary="true" uuid="20b9d147-a2b1-425c-b867-7b6e8394e1bb">
+        <orm-attributes>
+          <attribute name="generator">
+            <attribute name="strategy">AUTO</attribute>
+          </attribute>
+        </orm-attributes>
+      </field>
+      <orm-attributes>
+        <attribute name="table">fos_user</attribute>
+        <attribute name="export-file-name">User.php</attribute>
+      </orm-attributes>
+    </entity>
+    <orm-attributes>
+      <attribute name="namespace">Law\UserBundle\Entity</attribute>
+    </orm-attributes>
+  </module>
+  <visual-data>
+    <entity uuid="085e3c95-604e-43d6-bc5b-0b7e2b9e0de4" position-x="660" position-y="109" size-x="0" size-x2="151" size-y="0" size-y2="87"/>
+    <entity uuid="08682b0b-fa00-43f1-93d7-edd8128899d1" position-x="463" position-y="40" size-x="0" size-x2="168" size-y="0" size-y2="87"/>
+    <entity uuid="107345d0-44b2-44ac-820e-1c32f5f5b75a" position-x="468" position-y="447" size-x="0" size-x2="143" size-y="0" size-y2="45"/>
+    <entity uuid="1b50a7cd-3bc2-4a08-8c76-edb5a0eea7a6" position-x="195" position-y="181" size-x="0" size-x2="153" size-y="0" size-y2="87"/>
+    <entity uuid="22dbeb58-42ad-4088-92a7-dd395149a8ba" position-x="46" position-y="293" size-x="0" size-x2="126" size-y="0" size-y2="45"/>
+    <entity uuid="2f34ceda-5080-4555-a209-87fe0ac93190" position-x="635" position-y="726" size-x="0" size-x2="69" size-y="0" size-y2="31"/>
+    <entity uuid="3e7b5f7d-0ee3-48a6-88e0-c843fdb9b131" position-x="63" position-y="799" size-x="0" size-x2="92" size-y="0" size-y2="87"/>
+    <entity uuid="3f53e190-9d7c-424e-ab22-2196d438057e" position-x="484" position-y="329" size-x="0" size-x2="106" size-y="0" size-y2="87"/>
+    <entity uuid="4ed5a56c-b546-4cff-8bc5-3c796f20164b" position-x="926" position-y="546" size-x="0" size-x2="118" size-y="0" size-y2="59"/>
+    <entity uuid="4f275ec0-37cf-4479-a259-776bfdbe36c9" position-x="56" position-y="40" size-x="0" size-x2="106" size-y="0" size-y2="87"/>
+    <entity uuid="57adbbca-972a-4af1-ae80-f37709211b04" position-x="202" position-y="347" size-x="0" size-x2="168" size-y="0" size-y2="129"/>
+    <entity uuid="58a8efbf-d948-4cf4-a489-0f5fc8f71609" position-x="511" position-y="675" size-x="0" size-x2="69" size-y="0" size-y2="31"/>
+    <entity uuid="5bddd458-1b18-4508-9c63-b61dd3deaaa9" position-x="937" position-y="40" size-x="0" size-x2="96" size-y="0" size-y2="87"/>
+    <entity uuid="69585351-7cb5-4ddd-940e-3fdfe701389f" position-x="634" position-y="676" size-x="0" size-x2="83" size-y="0" size-y2="31"/>
+    <entity uuid="6beda593-c273-4110-92a3-bc4a3ae66db0" position-x="512" position-y="727" size-x="0" size-x2="69" size-y="0" size-y2="31"/>
+    <module uuid="7a195ffc-d257-4d60-acd6-89bf572661f2" bk-color="4294375930" position-x="50" position-y="50" size-x="0" size-x2="1095" size-y="0" size-y2="1032"/>
+    <entity uuid="7e75241d-3d13-4fce-b744-65df047865ba" position-x="934" position-y="256" size-x="0" size-x2="96" size-y="0" size-y2="59"/>
+    <entity uuid="82bc2ec0-15ab-4fc9-95d1-4d2ac5b1e39f" position-x="713" position-y="327" size-x="0" size-x2="179" size-y="0" size-y2="213"/>
+    <entity uuid="c7ea3228-e4fb-48df-80ee-68f46c08b434" position-x="56" position-y="546" size-x="0" size-x2="107" size-y="0" size-y2="45"/>
+  </visual-data>
+</orm-designer>

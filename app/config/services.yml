@@ -1,0 +1,23 @@
+# Learn more about services, parameters and containers at
+# http://symfony.com/doc/current/book/service_container.html
+parameters:
+      sonata.user.admin.user.class: Bank\UserBundle\Admin\Model\UserAdmin
+      sonata.user.admin.groups.class: Bank\UserBundle\Admin\Model\GroupAdmin
+#      sonata.media.admin.media.class: Bank\MediaBundle\Admin\ORM\MediaAdmin
+#      sonata.media.admin.media.class: Bank\MediaBundle\Admin\MediaAdmin
+
+#services:
+#    custom_name.admin.media:
+#            class: %sonata.media.admin.media.class%
+#            arguments:
+#                - ~
+#                - Bank\MediaBundle\Entity\Media
+#                - BankMediaBundle::ORM:MediaAdmin
+#                - @sonata.media.pool
+#            tags:
+#                - {name: sonata.admin, manager_type: orm, group: admin, label: Media}
+#    sonata.admin.extension:
+#          class: Bank\UserBundle\Admin\Model\UserAdmin
+#          tags:
+#              - { name: sonata.admin.extension, target: sonata.user.admin.user }
+#          arguments: [null, Sonata\UserBundle\Entity\User, SonataUserBundle:UserAdmin]

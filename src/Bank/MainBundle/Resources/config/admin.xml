@@ -1,0 +1,65 @@
+<?xml version="1.0" ?>
+
+<container xmlns="http://symfony.com/schema/dic/services"
+           xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+           xsi:schemaLocation="http://symfony.com/schema/dic/services http://symfony.com/schema/dic/services/services-1.0.xsd">
+    <services>
+
+        <!-- building -->
+        <service id="mag.admin.building" class="Bank\MainBundle\Admin\BuildingAdmin">
+            <tag name="sonata.admin" manager_type="orm" group="Building" label="Building"/>
+            <argument/>
+            <argument>Bank\MainBundle\Entity\Building</argument>
+            <argument>NULL</argument>
+        </service>
+
+        <!-- department -->
+        <service id="mag.admin.department" class="Bank\MainBundle\Admin\DepartmentAdmin">
+            <tag name="sonata.admin" manager_type="orm" group="Building" label="Department"/>
+            <argument/>
+            <argument>Bank\MainBundle\Entity\Department</argument>
+            <argument>NULL</argument>
+        </service>
+
+        <!-- cameras -->
+        <service id="mag.admin.cameras" class="Bank\MainBundle\Admin\CamerasAdmin">
+            <tag name="sonata.admin" manager_type="orm" group="Building" label="Cameras"/>
+            <argument/>
+            <argument>Bank\MainBundle\Entity\Cameras</argument>
+            <argument>NULL</argument>
+        </service>
+
+        <!-- turnstile -->
+        <service id="mag.admin.turnstile" class="Bank\MainBundle\Admin\TurnstileAdmin">
+            <tag name="sonata.admin" manager_type="orm" group="Building" label="Turnstile"/>
+            <argument/>
+            <argument>Bank\MainBundle\Entity\Turnstile</argument>
+            <argument>NULL</argument>
+        </service>
+
+        <!-- enters -->
+        <service id="mag.admin.entersa" class="Bank\MainBundle\Admin\EnterAdmin">
+            <tag name="sonata.admin" manager_type="orm" group="Building" label="Enters"/>
+            <argument/>
+            <argument>Bank\MainBundle\Entity\Enter</argument>
+            <argument>NULL</argument>
+        </service>
+
+        <!-- workers -->
+        <service id="mag.admin.workers" class="Bank\MainBundle\Admin\WorkersAdmin">
+            <tag name="sonata.admin" manager_type="orm" group="Building" label="Workers"/>
+            <argument/>
+            <argument>Bank\MainBundle\Entity\Workers</argument>
+            <argument>NULL</argument>
+        </service>
+
+        <!--&lt;!&ndash; price &ndash;&gt;-->
+        <!--<service id="bank.main.admin.price" class="Bank\MainBundle\Admin\PriceAdmin">-->
+            <!--<tag name="sonata.admin" manager_type="orm" group="Branch and Currency" label="History"/>-->
+            <!--<argument/>-->
+            <!--<argument>Bank\MainBundle\Entity\Price</argument>-->
+            <!--<argument>NULL</argument>-->
+        <!--</service>-->
+
+    </services>
+</container>
