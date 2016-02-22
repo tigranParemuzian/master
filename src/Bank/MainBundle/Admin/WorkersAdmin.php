@@ -7,6 +7,7 @@ use Sonata\AdminBundle\Admin\Admin;
 use Sonata\AdminBundle\Datagrid\DatagridMapper;
 use Sonata\AdminBundle\Datagrid\ListMapper;
 use Sonata\AdminBundle\Form\FormMapper;
+use Sonata\AdminBundle\Show\ShowMapper;
 
 class WorkersAdmin extends Admin
 {
@@ -57,6 +58,28 @@ class WorkersAdmin extends Admin
 			->addIdentifier('gender')
 			->addIdentifier('age')
 			->add('department')
+			->add('_action', 'actions', array(
+				'actions' => array(
+					'show' => array(),
+					'edit' => array(),
+					'delete' => array(),
+				)))
 		;
 	}
+
+	/**
+	 * @param ShowMapper $showMapper
+	 */
+	protected function configureShowFields(ShowMapper $showMapper)
+	{
+		$showMapper
+			->add('lastName')
+			->add('firstName')
+			->add('code')
+			->add('gender')
+			->add('age')
+			->add('department')
+		;
+	}
+
 }

@@ -7,6 +7,7 @@ use Sonata\AdminBundle\Admin\Admin;
 use Sonata\AdminBundle\Datagrid\DatagridMapper;
 use Sonata\AdminBundle\Datagrid\ListMapper;
 use Sonata\AdminBundle\Form\FormMapper;
+use Sonata\AdminBundle\Show\ShowMapper;
 
 class EnterAdmin extends Admin
 {
@@ -54,6 +55,24 @@ class EnterAdmin extends Admin
 			->add('cameras')
 			->add('turnstile')
 			->add('building')
+			->add('_action', 'actions', array(
+				'actions' => array(
+					'show' => array(),
+					'edit' => array(),
+					'delete' => array(),
+				)))
+		;
+	}
+
+	/**
+	 * @param ShowMapper $showMapper
+	 */
+	protected function configureShowFields(ShowMapper $showMapper)
+	{
+		$showMapper
+			->add('name')
+			->add('number')
+			->add('enter')
 		;
 	}
 }
