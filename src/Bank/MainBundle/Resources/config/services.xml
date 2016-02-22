@@ -4,16 +4,16 @@
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     xsi:schemaLocation="http://symfony.com/schema/dic/services http://symfony.com/schema/dic/services/services-1.0.xsd">
 
-    <!--<services>-->
+    <services>
         <!--<service id="bank.event.listener" class="Bank\MainBundle\DoctrineListeners\EventListener">-->
             <!--<argument type="service" id="service_container" />-->
             <!--<tag name="doctrine.event_listener" event="onFlush"/>-->
         <!--</service>-->
 
-        <!--<service id="kernel.listener.your_listener_name" class="Bank\MainBundle\DoctrineListeners\EventListener">-->
-            <!--<argument type="service" id="service_container" />-->
-            <!--<tag name="kernel.event_listener" event="kernel.exception" method="onKernelException" />-->
-        <!--</service>-->
-    <!--</services>-->
+        <service id="kernel.listener.your_listener_name" class="Bank\MainBundle\DoctrineListeners\EventListener">
+            <argument type="service" id="service_container" />
+            <tag name="kernel.event_listener" event="kernel.exception" method="onKernelException" />
+        </service>
+    </services>
 
 </container>

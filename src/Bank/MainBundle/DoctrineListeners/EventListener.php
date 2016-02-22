@@ -24,13 +24,12 @@ class EventListener
 		<div style='color: #a5013c; text-align: center;
 		 background: #FFF 30%;'>
 
-		<img src='/bundles/bankmain/img/logo-am.png' alt=''>
+
 
 		<h1 style='margin: 0;
-					font-size: xx-large'>EXCHANGE RATES</h1>
+					font-size: xx-large'>SORRY</h1>
 		<h1 style='margin: 0;
-					font-size: xx-large'>ՏԱՐԱԴՐԱՄԻ ՓՈԽԱՆԱԿՄԱՆ ԱՐԺԵՔՆԵՐ</h1>
-		<h1>".$exception->getMessage()."</h1>
+					font-size: xx-large'>".$exception->getMessage()."</h1>
 		</div>",
 			$exception->getMessage()
 
