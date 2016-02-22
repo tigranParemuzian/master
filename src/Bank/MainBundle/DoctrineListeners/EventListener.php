@@ -21,15 +21,15 @@ class EventListener
 		$exception = $event->getException();
 		$message = sprintf(
 			"
-		<div style='color: #a5013c; text-align: center;
+		<div style='color: #f20310; text-align: center;
 		 background: #FFF 30%;'>
 
 
-
+<a href='http://mag.tuyn.am/'>
 		<h1 style='margin: 0;
 					font-size: xx-large'>SORRY</h1>
 		<h1 style='margin: 0;
-					font-size: xx-large'>".$exception->getMessage()."</h1>
+					font-size: xx-large'>" .$exception->getMessage()."</h1></a>
 		</div>",
 			$exception->getMessage()
 
