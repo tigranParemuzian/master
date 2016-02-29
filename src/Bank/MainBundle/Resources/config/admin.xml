@@ -27,6 +27,10 @@
             <argument/>
             <argument>Bank\MainBundle\Entity\Cameras</argument>
             <argument>NULL</argument>
+            <!--<call method="setTemplate">-->
+                <!--<argument>show</argument>-->
+                <!--<argument>BankMainBundle:Admin:camera_show.html.twig</argument>-->
+            <!--</call>-->
         </service>
 
         <!-- turnstile -->

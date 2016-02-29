@@ -19,8 +19,8 @@ class CamerasAdmin extends Admin
 		->tab('General')
 			->with('General')
 			->add('name', null, array('label'=>'Name'))
-			->add('url', 'url', array('label'=>'URL'))
-			->add('directory', 'url', array('label'=>'URL directory of history'))
+			->add('url', null, array('label'=>'URL'))
+			->add('directory', null, array('label'=>'URL directory of history'))
 			->add('description', 'textarea', array('label'=>'Description', 'required'=>false))
 			->end()
 		->end()
@@ -71,7 +71,7 @@ class CamerasAdmin extends Admin
 	{
 		$showMapper
 			->add('name')
-			->add('url')
+			->add('url', null, array('template' => 'BankMainBundle:Admin:camera_video_show.html.twig', 'label'=>'url'))
 			->add('directory')
 			->add('department')
 			->add('enter')

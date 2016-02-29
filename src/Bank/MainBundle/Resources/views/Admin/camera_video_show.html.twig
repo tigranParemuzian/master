@@ -1,0 +1,14 @@
+{% extends 'SonataAdminBundle:CRUD:base_show_field.html.twig' %}
+
+
+{% block field %}
+
+    <video width="320" height="240" controls>
+        <source src="{{ value }}" type="video/mp4">
+        <source src="{{ value }}" type="video/ogg">
+        {#Your browser does not support the video tag.#}
+    </video>
+    {#<iframe src="{{ value }}"></iframe>#}
+    {#<p>{{ value }}</p>#}
+    {#<img src="{{ asset('uploads/media/') }}{{ value|nl2br }}"/>#}
+{% endblock %}
