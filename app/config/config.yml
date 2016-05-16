@@ -251,6 +251,3 @@ fos_rest:
 sensio_framework_extra:
     view:
         annotations: false
-
-bank_main:
-    limit_branch: 10

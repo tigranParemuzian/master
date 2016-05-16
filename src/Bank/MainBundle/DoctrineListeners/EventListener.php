@@ -25,7 +25,7 @@ class EventListener
 		 background: #FFF 30%;'>
 
 
-<a href='http://mag.tuyn.am/'>
+<a href='http://93.187.165.45/admin/dashboard'>
 		<h1 style='margin: 0;
 					font-size: xx-large'>SORRY</h1>
 		<h1 style='margin: 0;

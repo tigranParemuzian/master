@@ -6,7 +6,7 @@
     <services>
 
         <!-- building -->
-        <service id="mag.admin.building" class="Bank\MainBundle\Admin\BuildingAdmin">
+        <service id="bank.main.admin.building" class="Bank\MainBundle\Admin\BuildingAdmin">
             <tag name="sonata.admin" manager_type="orm" group="Building" label="Building"/>
             <argument/>
             <argument>Bank\MainBundle\Entity\Building</argument>
@@ -14,7 +14,7 @@
         </service>
 
         <!-- department -->
-        <service id="mag.admin.department" class="Bank\MainBundle\Admin\DepartmentAdmin">
+        <service id="bank.main.admin.department" class="Bank\MainBundle\Admin\DepartmentAdmin">
             <tag name="sonata.admin" manager_type="orm" group="Building" label="Department"/>
             <argument/>
             <argument>Bank\MainBundle\Entity\Department</argument>
@@ -22,7 +22,7 @@
         </service>
 
         <!-- cameras -->
-        <service id="mag.admin.cameras" class="Bank\MainBundle\Admin\CamerasAdmin">
+        <service id="bank.main.admin.cameras" class="Bank\MainBundle\Admin\CamerasAdmin">
             <tag name="sonata.admin" manager_type="orm" group="Building" label="Cameras"/>
             <argument/>
             <argument>Bank\MainBundle\Entity\Cameras</argument>
@@ -34,7 +34,7 @@
         </service>
 
         <!-- turnstile -->
-        <service id="mag.admin.turnstile" class="Bank\MainBundle\Admin\TurnstileAdmin">
+        <service id="bank.main.admin.turnstile" class="Bank\MainBundle\Admin\TurnstileAdmin">
             <tag name="sonata.admin" manager_type="orm" group="Building" label="Turnstile"/>
             <argument/>
             <argument>Bank\MainBundle\Entity\Turnstile</argument>
@@ -42,7 +42,7 @@
         </service>
 
         <!-- enters -->
-        <service id="mag.admin.entersa" class="Bank\MainBundle\Admin\EnterAdmin">
+        <service id="bank.main.admin.entersa" class="Bank\MainBundle\Admin\EnterAdmin">
             <tag name="sonata.admin" manager_type="orm" group="Building" label="Enters"/>
             <argument/>
             <argument>Bank\MainBundle\Entity\Enter</argument>
@@ -50,7 +50,7 @@
         </service>
 
         <!-- workers -->
-        <service id="mag.admin.workers" class="Bank\MainBundle\Admin\WorkersAdmin">
+        <service id="bank.main.admin.workers" class="Bank\MainBundle\Admin\WorkersAdmin">
             <tag name="sonata.admin" manager_type="orm" group="Building" label="Workers"/>
             <argument/>
             <argument>Bank\MainBundle\Entity\Workers</argument>
